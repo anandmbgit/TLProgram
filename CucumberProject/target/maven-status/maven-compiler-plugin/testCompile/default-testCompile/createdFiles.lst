@@ -1,0 +1,7 @@
+testBase\Base.class
+StepDefinitions\QualificationSteps.class
+pages\loginPage.class
+pages\HomePage.class
+pages\QualificationPage.class
+StepDefinitions\LoginSteps.class
+runner\TestRunner.class
