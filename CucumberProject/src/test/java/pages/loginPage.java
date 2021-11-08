@@ -1,9 +1,4 @@
 package pages;
-
-
-import java.util.Iterator;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,7 +23,6 @@ public class loginPage extends Base {
 	@FindBy(id="welcome")
 	WebElement Welcome;
 	
-	
 	@FindBy(xpath="//a[contains(text(),'Logout')]")
 	WebElement Logout;
 	
@@ -36,7 +30,7 @@ public class loginPage extends Base {
 	public loginPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-			
+		
 	}
 	
 	
@@ -69,7 +63,6 @@ public class loginPage extends Base {
     	 Welcome.click();
     	 Thread.sleep(2000);
     	 Logout.click();
-    	 
     	 
      }
     	 

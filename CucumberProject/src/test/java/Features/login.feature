@@ -1,4 +1,4 @@
-@SmokeTest
+@LoginTest
 Feature: Login Fuctionality
 
   Scenario: Login with valid credentials

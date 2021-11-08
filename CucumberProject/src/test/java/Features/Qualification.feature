@@ -1,3 +1,5 @@
+@AddSkillTest
+
 Feature: Qualification fuctionality
 
     Scenario: Skills to add

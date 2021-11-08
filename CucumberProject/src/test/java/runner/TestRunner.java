@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features="src/test/java/Features",
 		glue= {"StepDefinitions"},
-				//tags= "@SmokeTest", 
+				//tags= "@AddEmployeeTest", 
 		plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 				
 		monochrome=true)
