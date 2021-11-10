@@ -1,9 +1,0 @@
-testBase\Base.class
-pages\AddEmployeePage.class
-StepDefinitions\QualificationSteps.class
-pages\loginPage.class
-StepDefinitions\AddEmployeeSteps.class
-pages\HomePage.class
-pages\QualificationPage.class
-StepDefinitions\LoginSteps.class
-runner\TestRunner.class
