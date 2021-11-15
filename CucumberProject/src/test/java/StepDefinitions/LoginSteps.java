@@ -3,6 +3,7 @@ package StepDefinitions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.And;
@@ -43,9 +44,11 @@ public class LoginSteps extends Base{
 
 	@Then("^User logsout$")
 	public void User_Logsout() throws Exception {
-		
+		//login.clickButton(logout);
 		login.logout();
 	}
+	
+	
 	 @And("^Close the browser$")
 	    public void Close_Browser() {
 	    Base.closeBrowser();	

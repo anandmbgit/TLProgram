@@ -9,7 +9,7 @@ import testBase.Base;
 
 public class AddEmployeePage extends Base{
 
-	@FindBy(id="menu_pim_viewPimModule")
+	@FindBy(id="enu_pim_viewPimModule")
 	WebElement PIM;
 	
 	@FindBy(id="menu_pim_addEmployee")

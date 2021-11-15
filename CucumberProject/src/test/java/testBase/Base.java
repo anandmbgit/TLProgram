@@ -17,8 +17,8 @@ public class Base {
 		
 	try {
 		property=new Properties();
-		FileInputStream fis=new FileInputStream("C:\\Users\\129866866\\eclipse-workspace\\CucumberProject\\src\\test\\java\\config.properties");
-	    property.load(fis);
+		FileInputStream fis=new FileInputStream(System.getProperty("user.dir") + "/src/test/java/config.properties");
+		property.load(fis);
 	    
 	    }catch(IOException e) {
 		
@@ -27,14 +27,13 @@ public class Base {
 	
 	public static void setup() {
 		
-      String browsername=property.getProperty("browser");		
-	
+    String browsername=property.getProperty("browser");		
 	if(browsername.equals("chrome")){
-	  System.setProperty("webdriver.chrome.driver","C:\\Users\\129866866\\eclipse-workspace\\CucumberProject\\src\\test\\resources\\drivers\\chromedriver.exe");	
-	  driver=new ChromeDriver();
+	 System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver.exe");
+	 driver=new ChromeDriver();
 	}
 	else if(browsername.equals("firefox")){
-	  System.setProperty("webdriver.gecko.driver","src\\test\\resources\\drivers\\firefoxdriver.exe");	
+	  System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + "/src/test/resources/drivers/firefoxdriver.exe");	
 	  driver=new FirefoxDriver();
 	
 	  }

@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.en.And;
 import testBase.Base;
@@ -61,11 +63,19 @@ public class loginPage extends Base {
 	}
      public void logout() throws Exception {
     	 Welcome.click();
-    	 Thread.sleep(2000);
-    	 Logout.click();
-    	 
+    	// Thread.sleep(2000);
+    	// Logout.click();
+    	 clickButton(Logout);
      }
     	 
+     public void clickButton(WebElement ele) {
+     
+    	 WebDriverWait wait=new WebDriverWait(driver,20);
+    	 wait.until(ExpectedConditions.elementToBeClickable(ele));
+    	 ele.click();
+    	 
+    	 
+     }
      @And("^Close the Browser$")
      public void Close_Broser() {
      Base.closeBrowser();	

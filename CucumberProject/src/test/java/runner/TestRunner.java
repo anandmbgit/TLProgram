@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features="src/test/java/Features",
 		glue= {"StepDefinitions","Hooks"},
-				//tags= "@AddEmployeeTest", 
+				//tags= "@LoginTest", 
 		plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 				
 		monochrome=true)
