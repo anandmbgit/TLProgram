@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Automation Test Extent Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Nov 15, 2021 09:39:04 pm</span></a>
+<a href="#"><span class="badge badge-primary">Nov 29, 2021 10:09:29 pm</span></a>
 </li>
 </ul>
 </div>
@@ -71,13 +71,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Nov 15, 2021 09:39:04 pm</h3>
+<h3>Nov 29, 2021 10:09:29 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Nov 15, 2021 09:39:33 pm</h3>
+<h3>Nov 29, 2021 10:10:05 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -167,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"Add Employee":9.601,"Qualification fuctionality":12.132,"Login Fuctionality":6.769
+"Add Employee":14.404,"Qualification fuctionality":12.873,"Login Fuctionality":7.882
 };
 </script>
 <div class="row">
@@ -177,12 +177,12 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@AddEmployeeTest</td>
-<td>0</td>
+<td>@LoginTest</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0%</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 <tr>
 <td>@AddSkillTest</td>
@@ -193,12 +193,12 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@LoginTest</td>
+<td>@AddEmployeeTest</td>
+<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>0%</td>
 </tr>
 </tbody>
 </table></div>
@@ -268,7 +268,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@AddEmployeeTest</a><a class="dropdown-item" href="#">@AddSkillTest</a><a class="dropdown-item" href="#">@LoginTest</a>
+<a class="dropdown-item" href="#">@LoginTest</a><a class="dropdown-item" href="#">@AddSkillTest</a><a class="dropdown-item" href="#">@AddEmployeeTest</a>
 </ul>
 </li>
 </ul>
@@ -281,7 +281,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">Add Employee</p>
             <p class="text-sm">
-              <span>21:39:04 pm</span> / <span>00:00:09:601</span>
+              <span>22:09:30 pm</span> / <span>00:00:14:404</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -290,9 +290,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Add Employee</h5>
-<span class='badge badge-success'>11.15.2021 21:39:04</span>
-<span class='badge badge-danger'>11.15.2021 21:39:14</span>
-<span class='badge badge-default'>00:00:09:601</span>
+<span class='badge badge-success'>11.29.2021 22:09:30</span>
+<span class='badge badge-danger'>11.29.2021 22:09:44</span>
+<span class='badge badge-default'>00:00:14:404</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -324,13 +324,13 @@ eventsCount: 5,
                 <span>When User clicks on PIM menu item</span>
       <div>
         <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#enu_pim_viewPimModule"}
-  (Session info: chrome=95.0.4638.69)
+  (Session info: chrome=96.0.4664.45)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-UUUPUF0', ip: '192.168.1.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+System info: host: 'DESKTOP-UUUPUF0', ip: '9.171.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\129866~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57846}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ad505e8eedc4cf203eca0b301bf849e2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\129866~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62774}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5481409f1cc5163e5947120dd3a6f4fc
 *** Element info: {Using=id, value=enu_pim_viewPimModule}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -351,7 +351,7 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
 	at com.sun.proxy.$Proxy22.click(Unknown Source)
 	at pages.AddEmployeePage.clickPIMMenu(AddEmployeePage.java:38)
 	at StepDefinitions.AddEmployeeSteps.User_clicks_on_PIM_menu_item(AddEmployeeSteps.java:34)
-	at ✽.User clicks on PIM menu item(file:///C:/Users/129866866/git/TLProgram/CucumberProject/src/test/java/Features/AddEmployee.feature:8)
+	at ?.User clicks on PIM menu item(file:///C:/Users/129866866/git/TLProgram/CucumberProject/src/test/java/Features/AddEmployee.feature:8)
 </textarea>
       
       </div>
@@ -415,7 +415,7 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
           <div class="test-detail">
             <p class="name">Qualification fuctionality</p>
             <p class="text-sm">
-              <span>21:39:14 pm</span> / <span>00:00:12:132</span>
+              <span>22:09:44 pm</span> / <span>00:00:12:873</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -424,9 +424,9 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Qualification fuctionality</h5>
-<span class='badge badge-success'>11.15.2021 21:39:14</span>
-<span class='badge badge-danger'>11.15.2021 21:39:26</span>
-<span class='badge badge-default'>00:00:12:132</span>
+<span class='badge badge-success'>11.29.2021 22:09:44</span>
+<span class='badge badge-danger'>11.29.2021 22:09:57</span>
+<span class='badge badge-default'>00:00:12:873</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -509,7 +509,7 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
           <div class="test-detail">
             <p class="name">Login Fuctionality</p>
             <p class="text-sm">
-              <span>21:39:26 pm</span> / <span>00:00:06:769</span>
+              <span>22:09:57 pm</span> / <span>00:00:07:882</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -518,9 +518,9 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Login Fuctionality</h5>
-<span class='badge badge-success'>11.15.2021 21:39:26</span>
-<span class='badge badge-danger'>11.15.2021 21:39:33</span>
-<span class='badge badge-default'>00:00:06:769</span>
+<span class='badge badge-success'>11.29.2021 22:09:57</span>
+<span class='badge badge-danger'>11.29.2021 22:10:05</span>
+<span class='badge badge-default'>00:00:07:882</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -586,15 +586,15 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@AddEmployeeTest</p>
+<p class="name">@LoginTest</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@AddEmployeeTest</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<h4>@LoginTest</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -605,13 +605,13 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:39:04 pm</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:09:57 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Adding emplyoee</a>
+<a href="#" class="linked" test-id='30' id='31'>Login with valid credentials</a>
 <div class="">
-<span class="badge badge-default">Add Employee.Adding emplyoee</span>
+<span class="badge badge-default">Login Fuctionality.Login with valid credentials</span>
 </div>
 </td>
 </tr>
@@ -643,7 +643,7 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>21:39:14 pm</td>
+<td>22:09:44 pm</td>
 <td>
 <a href="#" class="linked" test-id='15' id='16'>Skills to add</a>
 <div class="">
@@ -658,15 +658,15 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@LoginTest</p>
+<p class="name">@AddEmployeeTest</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@LoginTest</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<h4>@AddEmployeeTest</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -677,13 +677,13 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>21:39:26 pm</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:09:30 pm</td>
 <td>
-<a href="#" class="linked" test-id='30' id='31'>Login with valid credentials</a>
+<a href="#" class="linked" test-id='1' id='2'>Adding emplyoee</a>
 <div class="">
-<span class="badge badge-default">Login Fuctionality.Login with valid credentials</span>
+<span class="badge badge-default">Add Employee.Adding emplyoee</span>
 </div>
 </td>
 </tr>
@@ -731,7 +731,7 @@ Session ID: ad505e8eedc4cf203eca0b301bf849e2
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>21:39:10 pm</td>
+<td>22:09:40 pm</td>
 <td>
 <a href="#" class="linked" test-id='1' id='5'>When User clicks on PIM menu item</a>
 <div class="">
