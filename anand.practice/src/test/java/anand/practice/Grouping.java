@@ -13,7 +13,7 @@ public class Grouping {
 	@Test(groups= {"Sanity"})
 	public void test2() {
 		
-	System.out.println("My Sanity test2 from Group1");	
+	System.out.println("My Sanity test2 from Group1  ");	
 	}
 	
 	@Test(groups= {"Regression"})
