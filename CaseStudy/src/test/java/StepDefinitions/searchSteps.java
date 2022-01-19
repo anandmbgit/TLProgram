@@ -20,18 +20,14 @@ SearchPage search;
 SearchResultPage searchResult;	
 CartPage cartpage;
 
-@Given("Browser opened")
-public void browser_opened() {
-	testBase.setup();
-   
-}
+
 
 @When("I search for the given product")
 public void i_search_for_product() {
 	search=new SearchPage(driver);
 
 	search.enterSearchProduct(property.getProperty("productToSearch"));
-	//search.clickSubmitButton();
+	
 }
 
 @Then("the product list appears for searched product")
@@ -56,10 +52,10 @@ public void Go_to_cart_and_verify_to_product() {
 	
 }
 
-@Then("Sign in to proceed to buy")
-public void Signin_to_proceed_to_buy() {
-	cartpage=new CartPage(driver);
-	cartpage.signin(property.getProperty("username"),property.getProperty("password"));
-		
- }
+//@Then("Sign in to proceed to buy")
+//public void Signin_to_proceed_to_buy() {
+//	cartpage=new CartPage(driver);
+//	cartpage.signin(property.getProperty("username"),property.getProperty("password"));
+//		
+// }
 }

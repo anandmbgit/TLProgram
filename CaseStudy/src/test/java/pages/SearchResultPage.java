@@ -19,7 +19,7 @@ public class SearchResultPage extends testBase{
 	
 	
 	
-	WebDriver driver;
+	//WebDriver driver;
 	public SearchResultPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -29,21 +29,17 @@ public class SearchResultPage extends testBase{
 	public ProductSelectionPage selectProduct() {
 		productName.click();
 		return new ProductSelectionPage(driver);
-		//return PageFactory.initElements(driver, ProductSelectionPage.class);
+		
 	}
 	
 	
 	
 	public CartPage addToCart() {
-		addToCart.click();
+		clickButton(addToCart);
 		return new CartPage(driver);
-		//return PageFactory.initElements(driver, CartPage.class);
+		
 	}
 	
-		public void clickButton(WebElement ele) {
-	    	 WebDriverWait wait=new WebDriverWait(driver,20);
-	    	 wait.until(ExpectedConditions.elementToBeClickable(ele));
-	    	 ele.click();
-	}
+
 	
 }

@@ -48,7 +48,8 @@ public class testBase {
 	 driver=new ChromeDriver();
 	}
 	else if(browsername.equals("firefox")){
-	  System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + "/src/test/resources/drivers/firefoxdriver.exe");	
+		WebDriverManager.firefoxdriver().setup();
+	//System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + "/src/test/resources/drivers/firefoxdriver.exe");	
 	  driver=new FirefoxDriver();
 	
 	  }
@@ -73,7 +74,7 @@ public class testBase {
 	}
 	
 	public void clickButton(WebElement ele) {
-   	 WebDriverWait wait=new WebDriverWait(driver,20);
+   	 WebDriverWait wait=new WebDriverWait(driver,10);
    	 wait.until(ExpectedConditions.elementToBeClickable(ele));
    	 ele.click();
 	}
@@ -160,11 +161,16 @@ public class testBase {
 
 	}
 	
-	public static void enterText(By locator, String value) {
-		WebElement textbox = driver.findElement(locator);
-		textbox.clear();
-		textbox.sendKeys(value);
-		}
+//	public static void enterText(By locator, String value) {
+//		WebElement textbox = driver.findElement((By) locator);
+//		textbox.clear();
+//		textbox.sendKeys(value);
+//		}
+//	
+	 public void enterText(WebElement element,String text) { 
+		 element.clear();
+         element.sendKeys(text);
+  } 
 	
     public static void closeBrowser() {
 		

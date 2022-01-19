@@ -32,7 +32,7 @@ public class CartPage extends testBase {
 	@FindBy(id="signInSubmit")
 	WebElement SignInButton;
     
-	WebDriver driver;
+	//WebDriver driver;
 	public CartPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -47,14 +47,7 @@ public class CartPage extends testBase {
 			proceedToBuy.click();
 		}
 		
-		public void signin(String uname,String pwd) {
-			
-				username.sendKeys(uname);
-				continueButton.click();
-				password.sendKeys(pwd);
-				SignInButton.click();
-				
-			}
+	
 			
 		}
 

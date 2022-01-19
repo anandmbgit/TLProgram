@@ -21,7 +21,7 @@ public class SearchPage extends testBase {
 	
 	
 	
-	WebDriver driver;
+	//WebDriver driver;
 	public SearchPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -31,7 +31,8 @@ public class SearchPage extends testBase {
 	
     public SearchResultPage enterSearchProduct(String product) {
     	
-    	mainsearch.sendKeys(product);
+    	enterText(mainsearch,product);
+    	//mainsearch.sendKeys(product);
     	clickButton(searchSubmit);
     	return PageFactory.initElements(driver, SearchResultPage.class);
 	}
