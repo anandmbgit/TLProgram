@@ -5,57 +5,48 @@ import java.util.Set;
 
 import org.openqa.selenium.WebElement;
 
+import com.aventstack.extentreports.util.Assert;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.CartPage;
 import pages.SearchPage;
-import pages.SearchResultPage;
 import testBase.testBase;
 
 
 
 public class searchSteps extends testBase{
-SearchPage search;	
-SearchResultPage searchResult;	
-CartPage cartpage;
 
-
+SearchPage search=new SearchPage(driver);
+CartPage cartpage=new CartPage(driver);
 
 @When("I search for the given product")
 public void i_search_for_product() {
-	search=new SearchPage(driver);
-
 	search.enterSearchProduct(property.getProperty("productToSearch"));
+}
+
+@Then("the product is displayed on the screen if it is available")
+public void the_product_list_appears_for_searched_product() {
+ search.isProductAvailable();
 	
 }
 
-@Then("the product list appears for searched product")
-public void the_product_list_appears_for_searched_product() {
-   
-}
-
-@Then("Select the product and add to cart")
+@Then("select the product with quantity and add to cart")
 public void Select_the_product() throws Throwable {
-	searchResult=new SearchResultPage(driver);
-	searchResult.selectProduct();
+	search.selectProduct();
 	switchtoOtherWindow();
-    searchResult.addToCart();
+	cartpage.selectQuantity(property.getProperty("quantity"));
+	search.addToCart();
 	
  }
 
 @Then("Go to cart and verify the product")
-public void Go_to_cart_and_verify_to_product() {
-	cartpage=new CartPage(driver);
+public void Go_to_cart_and_verify_to_product() throws Exception {
 	cartpage.cartButton();
 	cartpage.proceedToBuyButton();
-	
-}
+	cartpage.deliverToThisAddressButton();
+	//cartpage.selectCashOnDelivery();
+     }
 
-//@Then("Sign in to proceed to buy")
-//public void Signin_to_proceed_to_buy() {
-//	cartpage=new CartPage(driver);
-//	cartpage.signin(property.getProperty("username"),property.getProperty("password"));
-//		
-// }
 }

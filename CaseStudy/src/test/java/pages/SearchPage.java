@@ -1,4 +1,6 @@
 package pages;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +21,11 @@ public class SearchPage extends testBase {
 	@FindBy(id="nav-search-submit-button")
 	WebElement searchSubmit;
 	
+	@FindBy(linkText="boAt Bassheads 900 Wired On Ear Headphones with Mic (Carbon Black)")
+	WebElement productName;
+	
+	@FindBy(name="submit.add-to-cart")
+	WebElement addToCart;
 	
 	
 	//WebDriver driver;
@@ -28,20 +35,32 @@ public class SearchPage extends testBase {
 		
 	}
 	
-	
-    public SearchResultPage enterSearchProduct(String product) {
+	public void enterSearchProduct(String product) {
     	
     	enterText(mainsearch,product);
-    	//mainsearch.sendKeys(product);
     	clickButton(searchSubmit);
-    	return PageFactory.initElements(driver, SearchResultPage.class);
-	}
+    }
+    
+	
 
-    
-    	 
-    	 
-     }
-    
-     	
-     
-     
+	public boolean isProductAvailable() {
+
+		try {
+			productName.isDisplayed();
+			return true;
+	  } catch (NoSuchElementException e) {
+			return false;
+		}
+ 	}
+
+	public void selectProduct() {
+		productName.click();
+		
+	}
+	
+	public CartPage addToCart() {
+		clickButton(addToCart);
+		return new CartPage(driver);
+		
+	}
+ }

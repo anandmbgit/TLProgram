@@ -136,37 +136,23 @@ public class testBase {
 		}
 	}
 	
-	public void select(By locator, String value) {
-        
-		//Select select = new Select(locator);
-		//select.selectByVisibleText(value);
-         
-		new Select (driver.findElement(locator)).selectByVisibleText(value); 
-		
-
-	}
+	public void select(WebElement locator, String value) {
+	     Select select = new Select(locator);
+		 select.selectByVisibleText(value);
+    }
 	
-	public boolean isElementPresent(By by) {
+	
+	
+	public boolean isElementPresent(By ele) {
 
 		try {
-
-			driver.findElement(by);
+			driver.findElement(ele);
 			return true;
-
-		} catch (NoSuchElementException e) {
-
+	  } catch (NoSuchElementException e) {
 			return false;
-
 		}
-
-	}
+ 	}
 	
-//	public static void enterText(By locator, String value) {
-//		WebElement textbox = driver.findElement((By) locator);
-//		textbox.clear();
-//		textbox.sendKeys(value);
-//		}
-//	
 	 public void enterText(WebElement element,String text) { 
 		 element.clear();
          element.sendKeys(text);

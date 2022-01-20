@@ -34,6 +34,12 @@ public class LoginPage extends testBase {
 	 }
 		
 	
+
+	public void signinButton() {
+    	clickButton(signin);
+      }
+    	 
+	
     public SearchPage login(String uname,String pwd) {
 
 		enterText(username,uname);
@@ -44,10 +50,6 @@ public class LoginPage extends testBase {
 	 }
 
 
-	public void signinButton() {
-    	clickButton(signin);
-      }
-    	 
    }
     
      	
