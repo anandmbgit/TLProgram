@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Automation Test Extent Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 21, 2022 12:37:56 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 28, 2022 11:40:20 pm</span></a>
 </li>
 </ul>
 </div>
@@ -57,6 +57,11 @@
 <span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -66,25 +71,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 21, 2022 12:37:56 AM</h3>
+<h3>Jan 28, 2022 11:40:20 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 21, 2022 12:38:47 AM</h3>
+<h3>Jan 28, 2022 11:40:32 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>3</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -100,12 +105,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>3</b> features passed
+<div><small data-tooltip='50%'>
+<b>1</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='50%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -123,9 +128,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
+<div><small data-tooltip='50%'><b>1</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='50%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -143,10 +148,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>8</b> steps passed</small></div>
+<div><small data-tooltip='50%'><b>4</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='12%'><b>1</b> steps failed,
+<b>3</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -162,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"Login to Amazon":13.972,"Payment functionality on Amazon":0.032,"Amazon search functionality":35.999
+"Login to Amazon":11.276,"Amazon search functionality":0.288
 };
 </script>
 <div class="row">
@@ -180,20 +185,12 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@Payment</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
 <td>@Search</td>
+<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>0%</td>
 </tr>
 </tbody>
 </table></div>
@@ -226,21 +223,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 3,
-failParent: 0,
+passParent: 1,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 3,
-failChild: 0,
+passChild: 1,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 8,
-failGrandChild: 0,
+passGrandChild: 4,
+failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 3,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -255,6 +252,7 @@ eventsCount: 5,
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -262,7 +260,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@Login</a><a class="dropdown-item" href="#">@Payment</a><a class="dropdown-item" href="#">@Search</a>
+<a class="dropdown-item" href="#">@Login</a><a class="dropdown-item" href="#">@Search</a>
 </ul>
 </li>
 </ul>
@@ -275,7 +273,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">Login to Amazon</p>
             <p class="text-sm">
-              <span>00:37:57 AM</span> / <span>00:00:13:972</span>
+              <span>23:40:20 pm</span> / <span>00:00:11:276</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -284,9 +282,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Login to Amazon</h5>
-<span class='badge badge-success'>01.21.2022 00:37:57</span>
-<span class='badge badge-danger'>01.21.2022 00:38:11</span>
-<span class='badge badge-default'>00:00:13:972</span>
+<span class='badge badge-success'>01.28.2022 23:40:20</span>
+<span class='badge badge-danger'>01.28.2022 23:40:32</span>
+<span class='badge badge-default'>00:00:11:276</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -322,25 +320,25 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="8"
+        <li class="test-item"  status="fail" test-id="8"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Payment functionality on Amazon</p>
+            <p class="name">Amazon search functionality</p>
             <p class="text-sm">
-              <span>00:38:11 AM</span> / <span>00:00:00:032</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>23:40:32 pm</span> / <span>00:00:00:288</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Payment functionality on Amazon</h5>
-<span class='badge badge-success'>01.21.2022 00:38:11</span>
-<span class='badge badge-danger'>01.21.2022 00:38:11</span>
-<span class='badge badge-default'>00:00:00:032</span>
+<h5 class="test-status text-fail">Amazon search functionality</h5>
+<span class='badge badge-success'>01.28.2022 23:40:32</span>
+<span class='badge badge-danger'>01.28.2022 23:40:32</span>
+<span class='badge badge-default'>00:00:00:288</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -350,72 +348,75 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Adress update and payment selection</div>
+        <div class="node" id="9"><span class="badge log fail-bg mr-2">Fail</span>Search and select the required product</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="">
           <div class="card-body">
-              <div class="step pass-bg" title="StepDefinitions.paymentSteps.i_will_add_new_address()">
-                <span>And I will add new address</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="13"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Amazon search functionality</p>
-            <p class="text-sm">
-              <span>00:38:11 AM</span> / <span>00:00:35:999</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Amazon search functionality</h5>
-<span class='badge badge-success'>01.21.2022 00:38:11</span>
-<span class='badge badge-danger'>01.21.2022 00:38:47</span>
-<span class='badge badge-default'>00:00:35:999</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Search and select the required product</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="StepDefinitions.searchSteps.i_search_for_product()">
+              <div class="step fail-bg" title="StepDefinitions.searchSteps.i_search_for_product()">
                 <span>When I search for the given product</span>
       <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbox"}
+  (Session info: chrome=97.0.4692.99)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TD1L9G7', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\03986N~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58664}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 555d7eedf1bd24cebbdb26f0abd00c2a
+*** Element info: {Using=id, value=twotabsearchtextbox}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.clear(Unknown Source)
+	at testBase.testBase.enterText(testBase.java:157)
+	at pages.SearchPage.enterSearchProduct(SearchPage.java:40)
+	at StepDefinitions.searchSteps.i_search_for_product(searchSteps.java:26)
+	at ?.I search for the given product(file:///C:/Users/03986N744/git/TLProgram/CaseStudy/src/test/java/Features/amazonSearch.feature:6)
+</textarea>
+      
       </div>
               </div>
-              <div class="step pass-bg" title="StepDefinitions.searchSteps.the_product_list_appears_for_searched_product()">
+              <div class="step skip-bg" title="StepDefinitions.searchSteps.the_product_list_appears_for_searched_product()">
                 <span>Then the product is displayed on the screen if it is available</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="StepDefinitions.searchSteps.Select_the_product()">
+              <div class="step skip-bg" title="StepDefinitions.searchSteps.Select_the_product()">
                 <span>Then select the product with quantity and add to cart</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="StepDefinitions.searchSteps.Go_to_cart_and_verify_to_product()">
+              <div class="step skip-bg" title="StepDefinitions.searchSteps.Go_to_cart_and_verify_to_product()">
                 <span>Then Go to cart and verify the product</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>Hooks.Hooks.takeScreenshotOnFailure(io.cucumber.java.Scenario)</span>
+      <div>screenshot
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
       <div>
       </div>
               </div>
@@ -438,7 +439,7 @@ eventsCount: 5,
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
@@ -466,7 +467,7 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>00:37:57 AM</td>
+<td>23:40:20 pm</td>
 <td>
 <a href="#" class="linked" test-id='1' id='2'>Login to Amazon with valid credentials</a>
 <div class="">
@@ -481,43 +482,7 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@Payment</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@Payment</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:38:11 AM</td>
-<td>
-<a href="#" class="linked" test-id='8' id='9'>Adress update and payment selection</a>
-<div class="">
-<span class="badge badge-default">Payment functionality on Amazon.Adress update and payment selection</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">@Search</p>
 <p class="duration text-sm">1 tests</p>
@@ -525,7 +490,7 @@ eventsCount: 5,
 <div class="test-contents d-none">
 <div class="info">
 <h4>@Search</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -536,13 +501,65 @@ eventsCount: 5,
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:38:11 AM</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:40:32 pm</td>
 <td>
-<a href="#" class="linked" test-id='13' id='14'>Search and select the required product</a>
+<a href="#" class="linked" test-id='8' id='9'>Search and select the required product</a>
 <div class="">
 <span class="badge badge-default">Amazon search functionality.Search and select the required product</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:40:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='10'>When I search for the given product</a>
+<div class="">
+<span class="badge badge-default">Amazon search functionality.Search and select the required product.When I search for the given product</span>
 </div>
 </td>
 </tr>
